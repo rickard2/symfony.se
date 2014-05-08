@@ -11,7 +11,7 @@
             {% if entry.meta('tags') is not empty %}
                 <i class="fa-tags"></i>{{ _misc.tags(entry.meta('tags')) }}
             {% endif %}</p>
-        {{ entry.content|markdown }}
+        {{ entry.content|excerpt|markdown }}
 
 
         <a class="btn btn-lg btn-red" href="{{path('blog', {'permalink': entry.permalink})}}">Läs mer</a>
